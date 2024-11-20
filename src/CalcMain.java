@@ -30,7 +30,20 @@ public class CalcMain {
                 finalList.add(value);
                 finalList.add(s);
                 value = "";
-            } else {
+            } 
+            else if (s.equals("p"))
+            {
+                if (!value.isEmpty()) {
+                    finalList.add(value);
+
+                    value = "";
+                }
+                finalList.add(String.valueOf(Math.PI));
+            }
+            
+            
+            
+            else {
                 System.out.print("Invalid input");
                 break;
             }
