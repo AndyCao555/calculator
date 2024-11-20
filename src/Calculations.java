@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Calculations {
 
     static String add(String a, String b) {
@@ -32,6 +34,13 @@ public class Calculations {
 
         double number1 = Double.parseDouble(a);
         double number2 = Double.parseDouble(b);
+       
+        while (number2 == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+            Scanner input = new Scanner(System.in);
+            System.out.print("Please enter a new non-zero value for the divisor: ");
+            number2 = input.nextDouble();
+        }
 
         double c = number1 / number2;
         return String.valueOf(c);
